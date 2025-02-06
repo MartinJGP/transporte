@@ -7,26 +7,26 @@ import 'slick-carousel/slick/slick-theme.css';
 import user1 from '/src/assets/landing/user1.png';
 import user2 from '/src/assets/landing/user2.png';
 import user3 from '/src/assets/landing/user3.png';
+import pregunta from '/src/assets/landing/preguntas.png';
+
 
 
 function UserExperienceCard() {
     const faqs = [
+        // 3 Preguntas frecuentes
         {
-            question: '¿Cómo puedo solicitar una cotización?',
-            answer: 'Puedes solicitar una cotización completando el formulario en nuestra página de servicios o contactándonos directamente por teléfono o correo electrónico.',
+            question: '¿Cuál es el tiempo de entrega de los servicios?',
+            answer: 'El tiempo de entrega de los servicios varía dependiendo del tipo de servicio y la ubicación. Por favor, contáctanos para obtener más información.'
         },
         {
-            question: '¿Qué tipos de transporte ofrecen?',
-            answer: 'Ofrecemos transporte nacional, carga internacional y servicios de logística integral.',
+            question: '¿Cuál es el costo de los servicios?',
+            answer: 'El costo de los servicios varía dependiendo del tipo de servicio y la ubicación. Por favor, contáctanos para obtener más información.'
         },
         {
-            question: '¿Cómo garantizan la seguridad de la carga?',
-            answer: 'Monitoreamos todas las cargas 24/7 y utilizamos sistemas de seguridad avanzados para garantizar la protección de tu carga.',
-        },
-        {
-            question: '¿Cuáles son sus horarios de atención?',
-            answer: 'Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00. También ofrecemos soporte 24/7 para emergencias.',
-        },
+            question: '¿Ofrecen servicios personalizados?',
+            answer: 'Sí, ofrecemos servicios personalizados para satisfacer las necesidades específicas de cada cliente. Por favor, contáctanos para obtener más información.'
+        }
+
     ];
     const experiences = [
         {
@@ -34,30 +34,16 @@ function UserExperienceCard() {
             img: user1,
             comment: '"La experiencia fue increíble, el equipo fue muy profesional y los resultados superaron mis expectativas."'
         },
+        // 3 Experiencias de usuarios limpieza
         {
-            name: 'María López',
+            name: 'María González',
             img: user2,
-            comment: '" Estoy muy satisfecha con el servicio, el equipo fue muy atento y el resultado final fue excelente."'
+            comment: '"El servicio de limpieza fue excelente, el personal fue muy amable y eficiente. ¡Muy recomendado!"'
         },
         {
-            name: 'Carlos García',
+            name: 'Carlos Rodríguez',
             img: user3,
-            comment: '"El servicio fue excelente, muy atentos a los detalles y cumplieron con los plazos establecidos."'
-        },
-        {
-            name: 'Ana Torres',
-            img: user2,
-            comment: '"El equipo fue muy profesional y el resultado final fue exactamente lo que esperaba."'
-        },
-        {
-            name: 'Luis Fernández',
-            img: user1,
-            comment: '"Estoy muy satisfecho con el servicio, el equipo fue muy atento y el resultado final fue excelente."'
-        },
-        {
-            name: 'Sofía Martínez',
-            img: user2,
-            comment: '"El servicio fue excelente, cumplieron con todos los plazos y el resultado fue increíble."'
+            comment: '"Estoy muy satisfecho con el servicio de limpieza, mi casa quedó impecable y el personal fue muy cuidadoso con mis pertenencias."'
         }
     ];
 
@@ -117,9 +103,18 @@ function UserExperienceCard() {
             </Slider>
             <Box sx={{ padding: 4, marginBottom: 5 }}>
                 <Container maxWidth="lg">
-                    <Typography variant="h4" align="center" gutterBottom>
-                        Preguntas Frecuentes
-                    </Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
+
+                        <Typography variant="h3" align="center" color="textPrimary" gutterBottom>
+                            Preguntas Frecuentes
+                        </Typography>
+                        <CardMedia
+                            component="img"
+                            image={pregunta}
+                            alt="Preguntas"
+                            sx={{ width: 60, height: 60 }}
+                        />
+                    </Box>
                     {faqs.map((faq, index) => (
                         <Accordion key={index}>
                             <AccordionSummary expandIcon={<ExpandMoreIcon />}>

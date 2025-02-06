@@ -1,25 +1,25 @@
 
 import { Container, Grid, Typography, Card, CardContent, CardMedia, TextField, MenuItem, Button, Box } from '@mui/material';
 import { useState } from 'react';
-import nacional from '/src/assets/landing/servicionacional.jpeg';
-import logistica from '/src/assets/landing/serviciologistica.webp';
-import internacional from '/src/assets/landing/serviciointernacional.jpeg';
+import limpieza from '/src/assets/landing/servicioLimpieza.png';
+import desinfeccion from '/src/assets/landing/servicioDesinfeccion.jpeg';
+import tecnologia from '/src/assets/landing/servicioTecnologia.jpg';
 
 const services = [
     {
-        title: 'Transporte Nacional',
+        title: 'Limpieza',
         description: 'Cobertura en todas las principales ciudades del país.',
-        image: nacional,
+        image: limpieza,
     },
     {
-        title: 'Carga Internacional',
+        title: 'Desinfección',
         description: 'Conexiones globales con los principales puertos y aeropuertos.',
-        image: internacional,
+        image: desinfeccion,
     },
     {
-        title: 'Logística',
+        title: 'Tecnologia',
         description: 'Logística Integral: Almacenaje, distribución y gestión de inventario.',
-        image: logistica,
+        image: tecnologia,
     },
 ];
 
@@ -29,13 +29,14 @@ const cities = [
 ];
 
 const Services = () => {
-    const [serviceType, setServiceType] = useState('Transporte Nacional');
-    const [origin, setOrigin] = useState('');
-    const [destination, setDestination] = useState('');
-    const [cargoType, setCargoType] = useState('Carga General');
+    const [nombre, setNombre] = useState('');
+    const [email, setEmail] = useState('');
+    const [telefono, setTelefono] = useState('');
+    const [consulta, setConsulta] = useState('');
+    const [clientType, setClientType] = useState('');
 
     const handleSubmit = () => {
-        const message = `Solicitud de Cotización:\n\nTipo de Servicio: ${serviceType}\nOrigen: ${origin}\nDestino: ${destination}\nTipo de Carga: ${cargoType}`;
+        const message = `nombre: ${nombre}\n\nemail: ${email}\n\ntelefono: ${telefono}\n\nTipo de Cliente: ${clientType}\n\nConsulta: ${consulta}`;
         const whatsappUrl = `https://wa.me/34689285854?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 };
@@ -95,65 +96,84 @@ return (
             </Grid>
         </Box>
 
-        <Box sx={{ mt: 5, textAlign: 'center', py: 4, borderRadius: 2,}}>
-            <Typography variant="h4" gutterBottom>
-                Solicite su Cotización
-            </Typography>
-            <Typography variant="body1" align="center" color="textSecondary" gutterBottom>
-                Complete el siguiente formulario para solicitar una cotización.
-            </Typography>
-            <Box
-                component="form"
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: 2,
-                    maxWidth: 600,
-                    margin: '0 auto',
+        <Box sx={{ mt: 5, textAlign: 'center', py: 4, borderRadius: 2 }} id="contactar">
 
-                }}
-            >
-                <TextField
-                    select
-                    label="Tipo de Servicio"
-                    fullWidth
-                    value={serviceType}
-                    onChange={(e) => setServiceType(e.target.value)}
-                >
-                    <MenuItem value="Transporte Nacional">Transporte Nacional</MenuItem>
-                    <MenuItem value="Carga Internacional">Carga Internacional</MenuItem>
-                    <MenuItem value="Logística">Logística</MenuItem>
-                </TextField>
-                <TextField
-                    label="Origen"
-                    fullWidth
-                    placeholder="Ciudad de origen"
-                    value={origin}
-                    onChange={(e) => setOrigin(e.target.value)}
-                />
-                <TextField
-                    label="Destino"
-                    fullWidth
-                    placeholder="Ciudad de destino"
-                    value={destination}
-                    onChange={(e) => setDestination(e.target.value)}
-                />
-                <TextField
-                    select
-                    label="Tipo de Carga"
-                    fullWidth
-                    value={cargoType}
-                    onChange={(e) => setCargoType(e.target.value)}
-                >
-                    <MenuItem value="Carga General">Carga General</MenuItem>
-                    <MenuItem value="Carga Peligrosa">Carga Peligrosa</MenuItem>
-                    <MenuItem value="Carga Refrigerada">Carga Refrigerada</MenuItem>
-                </TextField>
-                <Button variant="contained" color="primary" size="large" onClick={handleSubmit}>
-                    Solicitar Cotización
-                </Button>
-            </Box>
+            <Grid container spacing={2} justifyContent="center" alignItems="center">
+                <Grid item xs={12} md={4}>
+                    <Typography variant="h3" align="center" color="textPrimary" gutterBottom>
+                       Solicita tu presupuesto
+                    </Typography>
+
+                    <Typography variant="h6" align="center" color="textPrimary" gutterBottom>
+                        ¿Tienes alguna duda?
+                    </Typography>
+                    <Typography variant="body2" align="center" color="textSecondary">
+                        Complete el formulario para obtener una cotización personalizada.
+                    </Typography>
+                </Grid>
+                <Grid item xs={12} md={8}>
+                    <Box
+                        component="form"
+                        sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            gap: 2,
+                            maxWidth: 600,
+                            margin: '0 auto',
+                            backgroundColor: '#f5f4f4',
+                            padding: 5,
+                            borderRadius: 10,
+                        }}
+                    >
+                        <TextField
+                            label="Nombre "
+                            fullWidth
+                            placeholder="Ingrese su nombre"
+                            value={nombre}
+                            onChange={(e) => setNombre(e.target.value)}
+                        >
+                        </TextField>
+                        <TextField
+                            label="Email"
+                            fullWidth
+                            placeholder="example@email.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <TextField
+                            label="Telefono"
+                            fullWidth
+                            placeholder={'Ingrese numero de telefono'}
+                            value={telefono}
+                            onChange={(e) => setTelefono(e.target.value)}
+                        />
+                        <TextField
+                            select
+                            label="Tipo de Cliente"
+                            fullWidth
+                            value={clientType}
+                            onChange={(e) => setClientType(e.target.value)}
+                        >
+                            <MenuItem value="empresa">Empresa</MenuItem>
+                            <MenuItem value="particular">Particular</MenuItem>
+                        </TextField>
+                        <TextField
+                            multiline
+                            rows={4}
+                            placeholder="ingrese su consulta"
+                            label="Consulta"
+                            fullWidth
+                            value={consulta}
+                            onChange={(e) => setConsulta(e.target.value)}
+                        >
+                        </TextField>
+                        <Button variant="contained" color="primary" size="large" onClick={handleSubmit}>
+                            Solicitar Cotización
+                        </Button>
+                    </Box>
+                </Grid>
+            </Grid>
         </Box>
     </Container>
 );

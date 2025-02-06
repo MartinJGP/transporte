@@ -23,9 +23,9 @@ const Header = () => {
         <AppBar position="fixed" sx={{ backgroundColor: '#1e90ff', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={icon} alt="icon" style={{ width: 45, height: 45, marginRight: 15 }} />
+                    <img src={icon} alt="icon" style={{ width: 50, height: 50, marginRight: 15 }} />
                     <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', color: '#fff' }}>
-                        United String
+                        ARTLIMP
                     </Typography>
                 </Box>
                 {isMobile ? (

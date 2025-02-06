@@ -1,9 +1,10 @@
 import Slider from "react-slick";
 import { Box, Typography } from "@mui/material";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
-import carrusel1 from "/src/assets/landing/slider1.jpg";
-import carrusel2 from "/src/assets/landing/slider2.jpg";
-import carrusel3 from "/src/assets/landing/slider3.jpg";
+import carrusel1 from "/src/assets/landing/carrusel1.png";
+import carrusel2 from "/src/assets/landing/carrusel2.png";
+import carrusel3 from "/src/assets/landing/carrusel3.png";
+import carrusel4 from "/src/assets/landing/carrusel4.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -21,6 +22,11 @@ const images = [
     {
         src: carrusel3,
         alt: "Imagen 3",
+
+    },
+    {
+        src: carrusel4,
+        alt: "Imagen 4",
 
     },
 ];
@@ -121,8 +127,8 @@ const Carrusel = () => {
                     borderRadius: { xs: "5px", sm: "10px" },
                 }}
             >
-                <Typography variant="h5" sx={{ fontSize: { xs: "1.25rem", sm: "1.5rem" } }}>United String</Typography>
-                <Typography variant="body2" sx={{ fontSize: { xs: "0.8rem", sm: "1rem" } }}>Soluciones Integrales de Transporte y Carga</Typography>
+                <Typography variant="h5" sx={{ fontSize: { xs: "1.25rem", sm: "1.5rem" } }}>ARTLIMP</Typography>
+                <Typography variant="body2" sx={{ fontSize: { xs: "0.8rem", sm: "1rem" } }}>Soluciones Integrales de Limpieza </Typography>
             </Box>
         </Box>
     );
