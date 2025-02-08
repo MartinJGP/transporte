@@ -43,17 +43,17 @@ const Services = () => {
 
 return (
     <Container maxWidth="lg" sx={{ py: 5 }} id="servicios">
-        <Typography variant="h4" align="center" gutterBottom>
+        <Typography variant="h3" align="center" gutterBottom>
             Nuestros Servicios
         </Typography>
-        <Typography variant="body1" align="center" color="textSecondary" gutterBottom>
+        <Typography variant="h6" align="center" color="textSecondary" gutterBottom>
             Soluciones logísticas integrales para satisfacer todas tus necesidades de transporte y carga.
         </Typography>
 
         <Grid container spacing={4} justifyContent="center">
             {services.map((service, index) => (
                 <Grid item xs={12} sm={6} md={4} key={index}>
-                    <Card sx={{ textAlign: 'center', height: '100%', borderRadius: '20%' }}>
+                    <Card sx={{ textAlign: 'center', height: '100%', borderRadius: '15%' }}>
                         <CardMedia
                             component="img"
                             image={service.image}
@@ -64,7 +64,7 @@ return (
                             <Typography variant="h6" gutterBottom>
                                 {service.title}
                             </Typography>
-                            <Typography variant="body2" color="textSecondary">
+                            <Typography variant="body1" color="textSecondary">
                                 {service.description}
                             </Typography>
                         </CardContent>
@@ -74,10 +74,10 @@ return (
         </Grid>
 
         <Box sx={{ mt: 5 }}>
-            <Typography variant="h4" align="center" gutterBottom>
+            <Typography variant="h3" align="center" gutterBottom>
                 Cobertura Nacional
             </Typography>
-            <Typography variant="body1" align="center" color="textSecondary" gutterBottom>
+            <Typography variant="h6" align="center" color="textSecondary" gutterBottom>
                 Presencia en todo el pais.
             </Typography>
             <Grid container spacing={2} justifyContent="center">
@@ -87,7 +87,7 @@ return (
                             variant="outlined"
                             color="primary"
                             fullWidth
-                            sx={{ borderRadius: '20px', fontSize: '0.875rem', padding: '8px 10px',color:'black' }}
+                            sx={{ borderRadius: '20px', fontSize: '1rem', padding: '8px 10px',color:'black' }}
                         >
                             {city}
                         </Button>
@@ -104,10 +104,10 @@ return (
                        Solicita tu presupuesto
                     </Typography>
 
-                    <Typography variant="h6" align="center" color="textPrimary" gutterBottom>
+                    <Typography variant="h5" align="center" color="textPrimary" gutterBottom>
                         ¿Tienes alguna duda?
                     </Typography>
-                    <Typography variant="body2" align="center" color="textSecondary">
+                    <Typography variant="h6" align="center" color="textSecondary">
                         Complete el formulario para obtener una cotización personalizada.
                     </Typography>
                 </Grid>
@@ -168,7 +168,7 @@ return (
                             onChange={(e) => setConsulta(e.target.value)}
                         >
                         </TextField>
-                        <Button variant="contained" color="primary" size="large" onClick={handleSubmit}>
+                        <Button variant="contained" color="primary" size="large" onClick={handleSubmit} sx={{ width: '50%', borderRadius: 10 ,fontSize: '1.1rem'}}>
                             Solicitar Cotización
                         </Button>
                     </Box>

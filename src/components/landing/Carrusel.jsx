@@ -127,8 +127,8 @@ const Carrusel = () => {
                     borderRadius: { xs: "5px", sm: "10px" },
                 }}
             >
-                <Typography variant="h5" sx={{ fontSize: { xs: "1.25rem", sm: "1.5rem" } }}>ARTLIMP</Typography>
-                <Typography variant="body2" sx={{ fontSize: { xs: "0.8rem", sm: "1rem" } }}>Soluciones Integrales de Limpieza </Typography>
+                <Typography variant="h4" sx={{ fontSize: { xs: "1.25rem", sm: "1.5rem" } }}>ARTLIMP</Typography>
+                <Typography variant="body2" sx={{ fontSize: { xs: "1rem", sm: "1.2rem" } }}>Soluciones Integrales de Limpieza </Typography>
             </Box>
         </Box>
     );

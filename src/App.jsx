@@ -40,6 +40,28 @@ function App() {
                 Contactar
             </Button>
         </Link>
+        <Button
+            variant="contained"
+            color="primary"
+            sx={{
+                position: "fixed",
+                bottom: 80,
+                right: 16, // Same position as "Contactar" button
+                zIndex: 1001, // Higher zIndex to ensure it appears above the "Contactar" button
+                backgroundColor: "#2c5edc",
+                color: "#fff",
+                '&:hover': {
+                    backgroundColor: "#218838",
+                },
+                boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)",
+                borderRadius: "50px",
+                padding: "10px 20px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+            }}
+        >
+            Chatbot
+        </Button>
     </div>
   )
 }
