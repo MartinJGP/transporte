@@ -23,8 +23,8 @@ const Header = () => {
         <AppBar position="fixed" sx={{ backgroundColor: '#1e90ff', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={icon} alt="icon" style={{ width: 50, height: 50, marginRight: 15 }} />
-                    <Typography variant="h5" component="div" sx={{ fontWeight: 'bold', color: '#fff' }}>
+                    <img src={icon} alt="icon" style={{ width: 80, height: 55, marginRight: 15 }} />
+                    <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: '#fff' }}>
                         ARTLIMP
                     </Typography>
                 </Box>
@@ -38,7 +38,7 @@ const Header = () => {
                                 <List>
                                     {menuItems.map((item, index) => (
                                         <ListItem button key={index}>
-                                            <Link to={item.href} smooth={true} duration={500} offset={-70} onClick={toggleDrawer(false)} style={{ textDecoration: 'none', color: '#000', fontWeight: 'bold' }}>
+                                            <Link to={item.href} smooth={true} duration={500} offset={-70} onClick={toggleDrawer(false)} style={{ textDecoration: 'none', color: '#000', fontWeight: 'bold',fontSize: '1rem' }}>
                                                 {item.text}
                                             </Link>
                                         </ListItem>
@@ -51,7 +51,7 @@ const Header = () => {
                     <Box sx={{ display: 'flex', gap: 2 }}>
                         {menuItems.map((item, index) => (
                             <Button key={index} color="inherit" sx={{ fontWeight: 'bold', color: '#fff', '&:hover': { color: '#ffeb3b' } }}>
-                                <Link to={item.href} smooth={true} duration={500} offset={-70} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <Link to={item.href} smooth={true} duration={500} offset={-70} style={{ textDecoration: 'none', color: 'inherit',fontSize: '1rem' }}>
                                     {item.text}
                                 </Link>
                             </Button>

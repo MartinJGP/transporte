@@ -82,12 +82,24 @@ return (
             </Typography>
             <Grid container spacing={2} justifyContent="center">
                 {cities.map((city, index) => (
-                    <Grid item xs={6} sm={4} md={3} key={index}>
+                    <Grid item xs={6} sm={4} md={2} key={index}>
                         <Button
-                            variant="outlined"
+                            variant="contained"
                             color="primary"
                             fullWidth
-                            sx={{ borderRadius: '20px', fontSize: '1rem', padding: '8px 10px',color:'black' }}
+                            sx={{
+                                borderRadius: '30px',
+                                fontSize: '1.1rem',
+                                padding: '12px 20px',
+                                marginTop: 2,
+                                color: '#fff',
+                                backgroundColor: '#55a1f8',
+                                '&:hover': {
+                                    backgroundColor: '#1565c0',
+                                },
+                                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+                                transition: 'all 0.3s ease',
+                            }}
                         >
                             {city}
                         </Button>

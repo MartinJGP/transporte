@@ -62,9 +62,9 @@ function UserExperienceCard() {
         // Add more client images as needed
     ];
     const settingsclient = {
-        dots: true,
+        dots: false,
         infinite: true,
-        speed: 1000,
+        speed: 2000,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
@@ -130,7 +130,7 @@ function UserExperienceCard() {
                 <Typography variant="h3" sx={{ textAlign: 'center', marginBottom: 4 }}>
                     Nuestros Clientes
                 </Typography>
-                <Slider {...settings}>
+                <Slider {...settingsclient}>
                     {clients.map((client, index) => (
                         <Box key={index} sx={{ padding: 2 }}>
                             <Card sx={{ width: '80%', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 2, height: '100px', boxShadow: 'none' }}>
@@ -156,12 +156,12 @@ function UserExperienceCard() {
                     const [rating, setRating] = useState(0);
                     return (
                         <Box key={index} sx={{ padding: 2 }}>
-                            <Card sx={{ width: '70%', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 2, height: '250px' }}>
+                            <Card sx={{ width: '70%', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 2, height: '300px' }}>
                                 <CardMedia
                                     component="img"
                                     image={experience.img}
                                     alt={experience.name}
-                                    sx={{ width: 120, height: 120, borderRadius: '50%' }}
+                                    sx={{ width: 120, height: 120, borderRadius: '30%' ,objectFit: 'cover' }}
                                 />
                                 <CardContent sx={{ textAlign: 'center' }}>
                                     <Typography variant="h6">{experience.name}</Typography>
