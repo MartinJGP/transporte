@@ -1,6 +1,7 @@
 
 import { Box, Container, Grid, Typography, Link } from "@mui/material";
-import { Facebook, LinkedIn, Instagram } from "@mui/icons-material";
+import { Facebook, Instagram,YouTube, Twitter, X } from "@mui/icons-material";
+
 
 const Footer = () => {
     return (
@@ -26,17 +27,7 @@ const Footer = () => {
                         </Typography>
                     </Grid>
 
-                    <Grid item xs={12} md={3}>
-                        <Typography variant="h6" align="center" gutterBottom>
-                            Seguridad
-                        </Typography>
-                        <Typography variant="body2" align="center">
-                            Seguridad Garantizada
-                        </Typography>
-                        <Typography variant="body2" align="center">
-                            Monitoreo 24/7
-                        </Typography>
-                    </Grid>
+
 
                     <Grid item xs={12} md={3}>
                         <Typography variant="h6" align="center" gutterBottom>
@@ -63,15 +54,24 @@ const Footer = () => {
                         <Typography variant="body2" align="center" >
                             WhatsApp: +34 689 28 58 54
                         </Typography>
+
+                    </Grid>
+                    <Grid item xs={12} md={3}>
+                        <Typography variant="h6" align="center" gutterBottom>
+                            Sigue ArtLimp
+                        </Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
-                            <Link href="https://www.facebook.com" color="inherit" sx={{ margin: "0 10px" }}>
+                            <Link href="https://www.facebook.com" target="_blank" color="inherit" sx={{ margin: "0 10px" }}>
                                 <Facebook />
                             </Link>
-                            <Link href="https://www.linkedin.com" color="inherit" sx={{ margin: "0 10px" }}>
-                                <LinkedIn />
+                            <Link href="https://www.twitter.com" target="_blank" color="inherit" sx={{ margin: "0 10px" }}>
+                                <X />
                             </Link>
-                            <Link href="https://www.instagram.com" color="inherit" sx={{ margin: "0 10px" }}>
+                            <Link href="https://www.instagram.com" target="_blank" color="inherit" sx={{ margin: "0 10px" }}>
                                 <Instagram />
+                            </Link>
+                            <Link href="https://www.youtube.com" target="_blank" color="inherit" sx={{ margin: "0 10px" }}>
+                                <YouTube />
                             </Link>
                         </Box>
                     </Grid>
