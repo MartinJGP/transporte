@@ -61,7 +61,7 @@ const Footer = () => {
                             Sigue ArtLimp
                         </Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 2 }}>
-                            <Link href="https://www.facebook.com" target="_blank" color="inherit" sx={{ margin: "0 10px" }}>
+                            <Link href="https://www.facebook.com/profile.php?id=100072131816543&rdid=9ahiy0d2eVlwiI3P&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15w1HALP2J%2F" target="_blank" color="inherit" sx={{ margin: "0 10px" }}>
                                 <Facebook />
                             </Link>
                             <Link href="https://www.twitter.com" target="_blank" color="inherit" sx={{ margin: "0 10px" }}>

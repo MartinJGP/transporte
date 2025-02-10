@@ -23,7 +23,7 @@ const Header = () => {
         <AppBar position="fixed" sx={{ backgroundColor: '#1e90ff', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={icon} alt="icon" style={{ width: 80, height: 55, marginRight: 15 }} />
+                    <img src={icon} alt="icon" style={{ width: 70, height: 55, marginRight: 15 }} />
                     <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: '#fff' }}>
                         ARTLIMP
                     </Typography>
