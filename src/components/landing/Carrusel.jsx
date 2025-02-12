@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import { Box, Typography } from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 import { ArrowForward, ArrowBack } from "@mui/icons-material";
 import carrusel1 from "/src/assets/landing/carrusel1.png";
 import carrusel2 from "/src/assets/landing/carrusel2.png";
@@ -93,11 +93,11 @@ const Carrusel = () => {
             sx={{
                 position: "relative",
                 height: "650px",
-                width: "calc(100% - 40px)",
-                margin: "0 auto",
+                width: "100%", // Cambiado a 100% para ocupar todo el ancho
+                margin: "0", // Eliminado el margen
                 overflow: "hidden",
                 borderRadius: "10px",
-                marginTop: '70px'
+                marginTop: '80px',
             }} id={"home"}
         >
             <Slider {...settings}>
@@ -121,14 +121,14 @@ const Carrusel = () => {
                     position: "absolute",
                     bottom: { xs: "10px", sm: "20px" },
                     left: { xs: "10px", sm: "20px" },
-                    color: "#fff",
-                    backgroundColor: "rgba(0, 0, 0, 0.3)",
+                    color: "#fffbfb",
+                    backgroundColor: "rgba(24,24,24,0.3)",
                     padding: { xs: "5px", sm: "10px" },
                     borderRadius: { xs: "5px", sm: "10px" },
                 }}
             >
-                <Typography variant="h4" sx={{ fontSize: { xs: "1.25rem", sm: "1.5rem" } }}>ARTLIMP</Typography>
-                <Typography variant="body2" sx={{ fontSize: { xs: "1rem", sm: "1.2rem" } }}>Soluciones Integrales de Limpieza </Typography>
+                <Typography variant="h4" sx={{ fontSize: { xs: "1.25rem", sm: "1.8rem" } }}>ARTLIMP</Typography>
+                <Typography variant="body2" sx={{ fontSize: { xs: "1rem", sm: "1.5rem" } }}>Soluciones Integrales de Limpieza </Typography>
             </Box>
         </Box>
     );

@@ -20,13 +20,13 @@ const Header = () => {
     ];
 
     return (
-        <AppBar position="fixed" sx={{ backgroundColor: '#1e90ff', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)' }}>
-            <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={icon} alt="icon" style={{ width: 70, height: 55, marginRight: 15 }} />
-                    <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: '#fff' }}>
-                        ARTLIMP
-                    </Typography>
+        <AppBar position="fixed" sx={{ backgroundColor: '#fdfdfd', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', height: 120 }}>
+            <Toolbar sx={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', height: '100%', padding: '0 20px' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+                    <img src={icon} alt="icon" style={{ width: 180, height: 110, marginRight: 15, marginTop: 10 }} />
+                    {/*<Typography variant="h5" component="div" sx={{ fontWeight: 'bold', color: '#5882e7', marginTop: 2 }}>*/}
+                    {/*    {isMobile ? 'ARTLIMP' : 'ARNET LIMPIEZA INTEGRAL'}*/}
+                    {/*</Typography>*/}
                 </Box>
                 {isMobile ? (
                     <>
@@ -38,7 +38,7 @@ const Header = () => {
                                 <List>
                                     {menuItems.map((item, index) => (
                                         <ListItem button key={index}>
-                                            <Link to={item.href} smooth={true} duration={500} offset={-70} onClick={toggleDrawer(false)} style={{ textDecoration: 'none', color: '#000', fontWeight: 'bold',fontSize: '1rem' }}>
+                                            <Link to={item.href} smooth={true} duration={500} offset={-70} onClick={toggleDrawer(false)} style={{ textDecoration: 'none', color: '#000', fontWeight: 'bold', fontSize: '1rem' }}>
                                                 {item.text}
                                             </Link>
                                         </ListItem>
@@ -50,8 +50,8 @@ const Header = () => {
                 ) : (
                     <Box sx={{ display: 'flex', gap: 2 }}>
                         {menuItems.map((item, index) => (
-                            <Button key={index} color="inherit" sx={{ fontWeight: 'bold', color: '#fff', '&:hover': { color: '#ffeb3b' } }}>
-                                <Link to={item.href} smooth={true} duration={500} offset={-70} style={{ textDecoration: 'none', color: 'inherit',fontSize: '1rem' }}>
+                            <Button key={index} color="inherit" sx={{ fontWeight: 'bold', color: '#3f75fc', '&:hover': { color: '#ffeb3b' }, marginTop: 2 }}>
+                                <Link to={item.href} smooth={true} duration={500} offset={-70} style={{ textDecoration: 'none', color: 'inherit', fontSize: '1rem' }}>
                                     {item.text}
                                 </Link>
                             </Button>

@@ -1,4 +1,15 @@
-import { Box, Card, CardMedia, CardContent, Typography, Container, AccordionSummary } from '@mui/material';
+import {
+    Box,
+    Card,
+    CardMedia,
+    CardContent,
+    Typography,
+    Container,
+    AccordionSummary,
+    Grid,
+    List,
+    ListItem, ListItemIcon
+} from '@mui/material';
 import Slider from 'react-slick';
 import { Accordion, AccordionDetails, Rating } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -11,7 +22,9 @@ import pregunta from '/src/assets/landing/preguntas.png';
 import client1 from '/src/assets/landing/cliente1.jpg';
 import client2 from '/src/assets/landing/cliente2.png';
 import client3 from '/src/assets/landing/cliente3.jpg';
+import limpieza from '/src/assets/landing/limpieza.jpg';
 import { useState } from 'react';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 function UserExperienceCard() {
     const faqs = [
@@ -59,7 +72,14 @@ function UserExperienceCard() {
         { img: client1 },
         { img: client2 },
         { img: client3 },
-        // Add more client images as needed
+    ];
+
+    const reasons = [
+        "Nuestro equipo está 100% asegurado, siendo un equipo estable y de confianza",
+        "Contamos con profesionales experimentados y en constante formación",
+        "Nos adaptamos a las necesidades de cada cliente personalizando así el servicio",
+        "Somos una empresa joven y consolidada gracias a la confianza de nuestros clientes",
+        "La calidad prima en todos nuestros servicios",
     ];
     const settingsclient = {
         dots: false,
@@ -125,7 +145,7 @@ function UserExperienceCard() {
     };
 
     return (
-        <Box sx={{ padding: 4, marginBottom: 5 }} id={"about"}>
+        <Box sx={{ padding: 4, marginBottom: 5,width: '100%', mx: 0, px: 0 }} id={"about"}>
             <Box sx={{ padding: 4, marginBottom: 5 }} id={"clients"}>
                 <Typography variant="h3" sx={{ textAlign: 'center', marginBottom: 4 }}>
                     Nuestros Clientes
@@ -138,7 +158,7 @@ function UserExperienceCard() {
                                     component="img"
                                     image={client.img}
                                     alt={`Client ${index + 1}`}
-                                    sx={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                    sx={{ width: '80%', height: '100%', objectFit: 'contain' }}
                                 />
                             </Card>
                         </Box>
@@ -204,6 +224,35 @@ function UserExperienceCard() {
                     ))}
                 </Container>
             </Box>
+            <Container sx={{ width: '100%', mt: 4, backgroundColor: "#f1f0f0", borderRadius: 1, p: 4,mx: 0, px: 0 }} maxWidth={false}>
+                <Grid container spacing={2} alignItems="center">
+
+                    <Grid item xs={16} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <img
+                            src={limpieza}
+                            alt="Limpieza"
+                            style={{ width: "50%", height: "auto", borderRadius: 10 }}
+                        />
+                    </Grid>
+
+                    <Grid item xs={12} md={6}>
+                        <Typography variant="h5" sx={{ color: "#66bbfa", fontWeight: "bold", mb: 2 }}>
+                            5 motivos para contratar Arnet Limpieza Integral
+                        </Typography>
+
+                        <List>
+                            {reasons.map((reason, index) => (
+                                <ListItem key={index} sx={{ color: "#44bbea", display: "flex", alignItems: "center" }}>
+                                    <ListItemIcon>
+                                        <CheckCircleIcon sx={{ color: "#1d5dff" }} />
+                                    </ListItemIcon>
+                                    {index + 1}. {reason}
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Grid>
+                </Grid>
+            </Container>
         </Box>
     );
 }
